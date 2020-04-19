@@ -1,0 +1,154 @@
+# depslib dependency file v1.0
+1584888995 source:d:\c++\sort\main.cpp
+	<iostream>
+	"Bubble.h"
+	"insertion.h"
+	"quick.h"
+	"merge.h"
+
+1584193031 source:d:\c++\sort\bubble.cpp
+	"Bubble.h"
+
+1584193002 d:\c++\sort\bubble.h
+	<vector>
+	<iostream>
+
+1584281091 source:d:\c++\sort\insertion.cpp
+	"insertion.h"
+
+1584257265 d:\c++\sort\insertion.h
+	<iostream>
+	<vector>
+
+1584818865 d:\c++\sort\quick.h
+	<vector>
+	<iostream>
+
+1584818839 source:d:\c++\sort\quick.cpp
+	"quick.h"
+	<typeinfo>
+
+1584888890 d:\c++\sort\merge.h
+	<vector>
+	<iostream>
+
+1584888824 source:d:\c++\sort\merge.cpp
+	"merge.h"
+
+1584148030 source:c:\users\a to z computer\downloads\sort-20200329t090719z-001\sort\bubble.cpp
+	"Bubble.h"
+
+1584148002 c:\users\a to z computer\downloads\sort-20200329t090719z-001\sort\bubble.h
+	<vector>
+	<iostream>
+
+1584236090 source:c:\users\a to z computer\downloads\sort-20200329t090719z-001\sort\insertion.cpp
+	"insertion.h"
+
+1584212264 c:\users\a to z computer\downloads\sort-20200329t090719z-001\sort\insertion.h
+	<iostream>
+	<vector>
+
+1586776636 source:c:\users\a to z computer\downloads\sort-20200329t090719z-001\sort\main.cpp
+	<iostream>
+	"Bubble.h"
+	"insertion.h"
+	"quick.h"
+	"merge.h"
+	"heap.h"
+	"PQueue.h"
+	<my_vector.h>
+
+1584773864 c:\users\a to z computer\downloads\sort-20200329t090719z-001\sort\quick.h
+	<vector>
+	<iostream>
+
+1584843890 c:\users\a to z computer\downloads\sort-20200329t090719z-001\sort\merge.h
+	<vector>
+	<iostream>
+
+1584848486 source:c:\users\a to z computer\downloads\sort-20200329t090719z-001\sort\merge.cpp
+	"merge.h"
+
+1585733589 source:c:\users\a to z computer\downloads\sort-20200329t090719z-001\sort\src\heap.cpp
+
+1585834684 c:\users\a to z computer\downloads\sort-20200329t090719z-001\sort\include\heap.h
+	<vector>
+	<iostream>
+
+1585840099 source:c:\users\a to z computer\downloads\sort-20200329t090719z-001\sort\src\pqueue.cpp
+	"PQueue.h"
+	"heap.h"
+
+1585840046 c:\users\a to z computer\downloads\sort-20200329t090719z-001\sort\include\pqueue.h
+	<vector>
+	<iostream>
+	"heap.h"
+
+1586765794 source:c:\users\a to z computer\downloads\sort-20200329t090719z-001\sort\src\my_vector.cpp
+	"my_vector.h"
+
+1586785223 c:\users\a to z computer\downloads\sort-20200329t090719z-001\sort\include\my_vector.h
+	<memory>
+	<iterator>
+	<iostream>
+
+1584148030 source:d:\c++\code\sort\sort\bubble.cpp
+	"Bubble.h"
+
+1584148002 d:\c++\code\sort\sort\bubble.h
+	<vector>
+	<iostream>
+
+1584236090 source:d:\c++\code\sort\sort\insertion.cpp
+	"insertion.h"
+
+1584212264 d:\c++\code\sort\sort\insertion.h
+	<iostream>
+	<vector>
+
+1587230885 source:d:\c++\code\sort\sort\main.cpp
+	<iostream>
+	"Bubble.h"
+	"insertion.h"
+	"quick.h"
+	"merge.h"
+	"heap.h"
+	"PQueue.h"
+	<my_vector.h>
+
+1584773864 d:\c++\code\sort\sort\quick.h
+	<vector>
+	<iostream>
+
+1584843890 d:\c++\code\sort\sort\merge.h
+	<vector>
+	<iostream>
+
+1585834684 d:\c++\code\sort\sort\include\heap.h
+	<vector>
+	<iostream>
+
+1585840046 d:\c++\code\sort\sort\include\pqueue.h
+	<vector>
+	<iostream>
+	"heap.h"
+
+1587227828 d:\c++\code\sort\sort\include\my_vector.h
+	<memory>
+	<iterator>
+	<iostream>
+	<initializer_list>
+
+1584848486 source:d:\c++\code\sort\sort\merge.cpp
+	"merge.h"
+
+1585733589 source:d:\c++\code\sort\sort\src\heap.cpp
+
+1586765794 source:d:\c++\code\sort\sort\src\my_vector.cpp
+	"my_vector.h"
+
+1585840099 source:d:\c++\code\sort\sort\src\pqueue.cpp
+	"PQueue.h"
+	"heap.h"
+

@@ -30,20 +30,19 @@ class my_vector
     public:
         //my_vector(T element = 0, allocator_<T>);
 
-        explicit my_vector(const Myallocator<T> &allocator_type = Myallocator<T>()){
+        explicit my_vector(const Myallocator<T> &allocator_type = Myallocator<T>()):m_alloc_type(allocator_type){
             cout << "ctor" << endl;
             my_vector_size = 0;
             my_vector_capacity = 0;
         }
 
-        explicit my_vector(int size, const Myallocator<T> &allocator_type = Myallocator<T>()){
+        explicit my_vector(int size, const Myallocator<T> &allocator_type = Myallocator<T>()):m_alloc_type(allocator_type){
             cout << "ctor with size" << endl;
-            buffer = allocator_type.allocate(size);
             my_vector_size = size;
             my_vector_capacity = size;
         }
 
-        explicit my_vector(size_t size, const T &value, const Myallocator<T> &allocator_type = Myallocator<T>()){
+        explicit my_vector(size_t size, const T &value, const Myallocator<T> &allocator_type = Myallocator<T>()):m_alloc_type(allocator_type){
 
 			cout << "ctor with size & value " << size << " & Value " << value << endl;
             buffer = allocator_type.allocate(size);
@@ -53,7 +52,7 @@ class my_vector
 				buffer[i] = value;
         }
 
-        my_vector(std::initializer_list<T> init_list, const Myallocator<T> &allocator_type = Myallocator<T>()){
+        my_vector(std::initializer_list<T> init_list, const Myallocator<T> &allocator_type = Myallocator<T>()):m_alloc_type(allocator_type){
             buffer = allocator_type.allocate(init_list.size());
             my_vector_size = init_list.size();
             my_vector_capacity = init_list.size();
@@ -124,37 +123,64 @@ class my_vector
 
         //End Iterator class
 
-    #if 0
-        T operator[](int i)
+
+        T & operator[](int i)
         {
             return *(buffer +i);
         }
-        #endif
-
+#if 0
         my_vector& operator[](int i)
         {
             buffer = buffer[i];
             return *this;
 
         }
-        void push_back(T element)
+#endif // 0
+
+        void my_push_back(const T &element)
         {
+            cout << "Push-back" << endl;
             if(my_vector_capacity <= my_vector_size)
             {
                 T *temp_buffer;
-                temp_buffer = allocate(temp_buffer, my_vector_size *2);
+                temp_buffer = m_alloc_type.allocate(my_vector_size *2);
+                for(auto i = 0;i < my_vector_size;i++)
+                    temp_buffer[i] = buffer[i];
+              //  m_alloc_type.deallocate(buffer, my_vector_size);
+              //This is supposed to be implemented in a diffrent way, but for now doint this way only
+                delete[]buffer;
+                buffer = nullptr;
+                buffer = temp_buffer;
+                my_vector_capacity = my_vector_capacity*2;
+                buffer[my_vector_size++] = element;
+            }
+            else
+            {
+                buffer[my_vector_size++] = element;
+
+            }
+        }
+
+        void push_back(T &&element)
+        {
+            cout << "R  value Push-back" << endl;
+            if(my_vector_capacity <= my_vector_size)
+            {
+                T *temp_buffer;
+                temp_buffer = m_alloc_type.allocate(my_vector_size *2);
                 temp_buffer = std::move(buffer);
                 buffer = nullptr;
                 buffer = temp_buffer;
 
             }
         }
-        int capacity()
+        int capacity() const
+
         {
             return my_vector_capacity;
         }
 
-        int size()
+        int size() const
         {
             return my_vector_size;
         }
@@ -178,6 +204,8 @@ class my_vector
         T * buffer;
         int my_vector_size;
         int my_vector_capacity;
+        const Myallocator<T> m_alloc_type;
+
 };
 
 #endif // MY_VECTOR_H
