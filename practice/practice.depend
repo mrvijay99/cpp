@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1587667210 source:d:\c++\practice\pointer_test.cpp
+	"pointer_test.h"
+	<iostream>
+	<memory>
+
+1587670619 d:\c++\practice\pointer_test.h
+	<string>
+	<iostream>
+	<memory>
+
+1587667238 source:d:\c++\practice\main.cpp
+	<iostream>
+	"pointer_test.h"
+	<memory>
+
