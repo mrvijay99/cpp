@@ -53,6 +53,7 @@ class my_vector
         }
 
         my_vector(std::initializer_list<T> init_list, const Myallocator<T> &allocator_type = Myallocator<T>()):m_alloc_type(allocator_type){
+            cout << "ctor with initilizer list" << endl;
             buffer = allocator_type.allocate(init_list.size());
             my_vector_size = init_list.size();
             my_vector_capacity = init_list.size();
@@ -67,6 +68,7 @@ class my_vector
         //Copy Constructor
         my_vector(const my_vector &obj, const Myallocator<T> &allocator_type = Myallocator<T>())
         {
+            cout << "copy ctor" << endl;
             my_vector_capacity = obj.my_vector_capacity;
             my_vector_size  = obj.my_vector_size;
             buffer = allocator_type.allocate(obj.my_vector_capacity);
@@ -77,7 +79,8 @@ class my_vector
         //Move Constructor
         my_vector(my_vector &&obj)
         {
-            buffer = std::move(obj.buffer);
+            cout << "move ctor" << endl;
+            buffer = std:..........:move(obj.buffer);
             my_vector_capacity = obj.my_vector_capacity;
             my_vector_size = obj.my_vector_size;
             obj.buffer = nullptr;
@@ -161,6 +164,7 @@ class my_vector
             }
         }
 
+        //TODO : Why this is not getting called even though i am passing RValue
         void push_back(T &&element)
         {
             cout << "R  value Push-back" << endl;
