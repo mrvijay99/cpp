@@ -1,0 +1,45 @@
+# depslib dependency file v1.0
+1590659417 source:d:\c++\study\cpp\rickmusic\instrument.cpp
+	"Instrument.h"
+
+1590680515 d:\c++\study\cpp\rickmusic\instrument.h
+	<cstring>
+	"InstrumentSpec.h"
+
+1590681222 d:\c++\study\cpp\rickmusic\instrumentspec.h
+	"helper.h"
+	<string>
+
+1590679672 d:\c++\study\cpp\rickmusic\helper.h
+	<string>
+
+1590659848 source:d:\c++\study\cpp\rickmusic\instrumentspec.cpp
+	"InstrumentSpec.h"
+
+1590664513 source:d:\c++\study\cpp\rickmusic\guitar.cpp
+	"guitar.h"
+
+1590680682 d:\c++\study\cpp\rickmusic\guitar.h
+	"Instrument.h"
+	"guitarSpec.h"
+
+1590680807 d:\c++\study\cpp\rickmusic\guitarspec.h
+	"InstrumentSpec.h"
+
+1590680884 source:d:\c++\study\cpp\rickmusic\guitarspec.cpp
+	"guitarSpec.h"
+
+1590674656 source:d:\c++\study\cpp\rickmusic\inventry.cpp
+	"Inventry.h"
+
+1591082364 d:\c++\study\cpp\rickmusic\inventry.h
+	<string>
+	"InstrumentSpec.h"
+	<list>
+	"guitar.h"
+
+1590681178 source:d:\c++\study\cpp\rickmusic\main.cpp
+	<iostream>
+	"Inventry.h"
+	"guitarSpec.h"
+
